@@ -4,7 +4,7 @@ import mock02 from '../assets/images/Ninjanest.png';
 import mock03 from '../assets/images/Toggl.png';
 import mock04 from '../assets/images/Technotsav.png';
 import mock05 from '../assets/images/Dattamsh.png';
-import mock06 from '../assets/images/mock06.png';
+import mock06 from '../assets/images/BNK.png';
 import mock07 from '../assets/images/mock07.png';
 import mock08 from '../assets/images/mock08.png';
 import mock09 from '../assets/images/mock09.png';
