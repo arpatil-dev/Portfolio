@@ -1,0 +1,72 @@
+#experience {
+    position: relative;
+    
+    // Add separator line at bottom
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #5000ca, transparent);
+        border-radius: 2px;
+    }
+    
+    .items-container {
+        padding: 5% 10%;
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: white;
+        }
+    }
+}
+
+// Light mode separator and text
+.light-mode #experience {
+    &::after {
+        background: linear-gradient(90deg, transparent, #5000ca, transparent);
+    }
+    
+    .items-container h1 {
+        color: #333;
+    }
+}
+
+.vertical-timeline-element--work .vertical-timeline-element-content {
+    box-shadow: 0 3px 0 #5000ca;
+}
+
+.location {
+    font-style: italic !important;
+    color: #666 !important;
+    margin-bottom: 10px !important;
+    font-size: 0.9rem !important;
+}
+
+// Custom styles for work experience
+.vertical-timeline-element--work .vertical-timeline-element-icon {
+    background: #5000ca !important;
+}
+
+@media screen and (max-width: 1170px) {
+    #experience .items-container {
+        padding: 5% 5%;
+        
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #experience .items-container {
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+}

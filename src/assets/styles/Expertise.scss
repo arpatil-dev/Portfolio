@@ -1,0 +1,156 @@
+.skills-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+
+    h1 {
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+    }
+
+    svg {
+        color: white;
+    }
+    
+    // Add separator line at bottom
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #61dafb, transparent);
+        border-radius: 2px;
+    }
+}
+
+.expertise-grid {
+    display: flex;
+    justify-content: center;
+    
+    .expertise-card {
+        max-width: 1000px;
+        width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+        
+        h2 {
+            margin: 20px 0;
+            font-size: 2.2rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        svg {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Light mode styles
+.light-mode .skills-container {
+    h1 {
+        color: #333;
+    }
+    
+    svg {
+        color: #61dafb;
+    }
+    
+    &::after {
+        background: linear-gradient(90deg, transparent, #333, transparent);
+    }
+    
+    .expertise-card {
+        h2 {
+            color: #333;
+        }
+        
+        p {
+            color: rgba(0, 0, 0, 0.8);
+        }
+        
+        svg {
+            color: #61dafb;
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 5% 5%;
+        
+        h1 {
+            font-size: 2rem;
+        }
+        
+        .expertise-grid .expertise-card {
+            padding: 30px 15px;
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        .expertise-grid .expertise-card {
+            padding: 20px 10px;
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media screen {
+    @media (max-width: 768px) {
+        .skills-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    
+        .skills-container .skills-grid {
+            display: initial;
+        }
+        
+        .skills-container .skills-grid .skill {
+            padding-bottom: 5%;
+        }
+    }
+
+    @media (max-width: 567px) {
+        .skills {
+            font-size: 12px;
+        }
+    }
+}
