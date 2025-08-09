@@ -1,52 +1,124 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faReact, 
-    faNodeJs, 
-    faJs, 
-    faHtml5, 
-    faCss3Alt, 
-    faPython, 
-    faJava, 
-    faPhp, 
-    faGit, 
-    faGithub, 
-    faDocker, 
-    faLinux, 
-    faWindows 
-} from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faCode, faCog } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/Skills.scss';
 
 const skillsCategories = {
     Languages: [
-        { name: "JavaScript", icon: faJs, color: "#F7DF1E" },
-        { name: "HTML5", icon: faHtml5, color: "#E34F26" },
-        { name: "CSS3", icon: faCss3Alt, color: "#1572B6" },
-        { name: "Python", icon: faPython, color: "#3776AB" },
-        { name: "Java", icon: faJava, color: "#007396" },
-        { name: "PHP", icon: faPhp, color: "#777BB4" },
-        { name: "C++", icon: faCode, color: "#00599C" },
-        { name: "C", icon: faCode, color: "#A8B9CC" },
+        { 
+            name: "JavaScript", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", 
+            color: "#F7DF1E" 
+        },
+        { 
+            name: "TypeScript", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
+            color: "#3178C6" 
+        },
+        { 
+            name: "HTML5", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", 
+            color: "#E34F26" 
+        },
+        { 
+            name: "CSS3", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", 
+            color: "#1572B6" 
+        },
+        { 
+            name: "Python", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", 
+            color: "#3776AB" 
+        },
+        { 
+            name: "Java", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", 
+            color: "#007396" 
+        },
+        { 
+            name: "PHP", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", 
+            color: "#777BB4" 
+        },
+        { 
+            name: "C++", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", 
+            color: "#00599C" 
+        },
+        { 
+            name: "C", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", 
+            color: "#A8B9CC" 
+        },
     ],
     "Libraries and Frameworks": [
-        { name: "React.js", icon: faReact, color: "#61DAFB" },
-        { name: "Node.js", icon: faNodeJs, color: "#339933" },
-        { name: "Express.js", icon: faCog, color: "#000000" },
-        { name: "Tailwind CSS", icon: faCss3Alt, color: "#06B6D4" },
-        { name: ".NET", icon: faCode, color: "#512BD4" },
+        { 
+            name: "React.js", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
+            color: "#61DAFB" 
+        },
+        { 
+            name: "Node.js", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", 
+            color: "#339933" 
+        },
+        { 
+            name: "Express.js", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", 
+            color: "#000000" 
+        },
+        { 
+            name: "Tailwind CSS", 
+            iconUrl: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", 
+            color: "#06B6D4" 
+        },
+        { 
+            name: ".NET", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg", 
+            color: "#512BD4" 
+        },
     ],
     "Tools and Platforms": [
-        { name: "Git", icon: faGit, color: "#F05032" },
-        { name: "GitHub", icon: faGithub, color: "#181717" },
-        { name: "Docker", icon: faDocker, color: "#2496ED" },
-        { name: "Linux", icon: faLinux, color: "#FCC624" },
-        { name: "Windows", icon: faWindows, color: "#0078D4" },
+        { 
+            name: "Git", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", 
+            color: "#F05032" 
+        },
+        { 
+            name: "GitHub", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", 
+            color: "#181717" 
+        },
+        { 
+            name: "Docker", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", 
+            color: "#2496ED" 
+        },
+        { 
+            name: "Linux", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", 
+            color: "#FCC624" 
+        },
+        { 
+            name: "Windows", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg", 
+            color: "#0078D4" 
+        },
     ],
     Databases: [
-        { name: "MongoDB", icon: faDatabase, color: "#47A248" },
-        { name: "MySQL", icon: faDatabase, color: "#4479A1" },
-        { name: "Firebase", icon: faDatabase, color: "#FFCA28" },
+        { 
+            name: "MongoDB", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", 
+            color: "#47A248" 
+        },
+        { 
+            name: "MySQL", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", 
+            color: "#4479A1" 
+        },
+        { 
+            name: "Firebase", 
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", 
+            color: "#FFCA28" 
+        },
     ]
 };
 
@@ -62,10 +134,15 @@ function Skills() {
                                             <div className="skills-grid">
                                                 {skills.map((skill, index) => (
                                                     <div key={index} className="skill-item">
-                                                        <FontAwesomeIcon 
-                                                            icon={skill.icon} 
-                                                            size="3x" 
-                                                            style={{ color: skill.color }}
+                                                        <img 
+                                                            src={skill.iconUrl} 
+                                                            alt={`${skill.name} icon`}
+                                                            className="skill-icon"
+                                                            style={{ 
+                                                                width: '48px', 
+                                                                height: '48px',
+                                                                filter: 'brightness(1.1) contrast(1.1)'
+                                                            }}
                                                         />
                                                         <span className="skill-name">{skill.name}</span>
                                                     </div>
