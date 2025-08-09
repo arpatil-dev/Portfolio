@@ -14,11 +14,11 @@ function About() {
 </p>
 
 <p>
-  My journey in technology began during my diploma studies, where I built a solid foundation in programming and <strong>computer engineering fundamentals</strong>. Since then, I have gained hands-on experience through internships and real-world projects, creating solutions that range from <strong>real-time collaboration platforms</strong> to <strong>AI-powered tools</strong>.
+  My journey in technology began during my diploma studies, where I built a solid foundation in programming and computer engineering fundamentals. Since then, I have gained hands-on experience through internships and real-world projects, creating solutions that range from real-time collaboration platforms to AI-powered tools.
 </p>
 
 <p>
-  I'm a <strong>quick learner</strong> with a <strong>collaborative mindset</strong> and a passion for crafting efficient, user-friendly solutions. My experience includes working in <strong>development teams</strong>, contributing to high-impact projects, and continuously adapting to emerging technologies to stay ahead in the industry.
+  I'm a <strong>quick learner</strong> with a <strong>collaborative mindset</strong> and a passion for crafting efficient, user-friendly solutions. My experience includes working in development teams, contributing to high-impact projects, and continuously adapting to emerging technologies to stay ahead in the industry.
 </p>
 
           
