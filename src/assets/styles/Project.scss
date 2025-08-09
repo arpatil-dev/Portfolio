@@ -1,3 +1,27 @@
+/* GitHub pill label for mobile view */
+.github-label-mobile {
+    display: none;
+}
+@media (max-width: 700px) {
+    .github-label-mobile {
+        display: inline-block;
+        background: #fff;
+        color: #181c24;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 16px;
+        padding: 2.5px 14px;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        vertical-align: middle;
+    }
+    .light-mode .github-label-mobile {
+        background: #222;
+        color: #fff;
+    }
+}
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -57,6 +81,18 @@
         opacity: 1;
         transition: transform 0.2s;
         z-index: 2;
+
+        /* Mobile: move icon inline with project name */
+        @media (max-width: 700px) {
+            position: static;
+            display: inline-block;
+            margin-right: 8px;
+            top: unset;
+            right: unset;
+            vertical-align: middle;
+        }
+    display: flex;
+    align-items: center;
     }
 
     .project:hover .github-icon {
@@ -73,6 +109,32 @@
         pointer-events: auto;
         background: #fff;
         box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        @media (max-width: 700px) {
+            display: none;
+        }
+/* GitHub tag pill for mobile */
+.github-tag {
+    display: none;
+}
+@media (max-width: 700px) {
+    .github-tag {
+        display: inline-block;
+        background: #24292f;
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 600;
+        border-radius: 16px;
+        padding: 4px 16px;
+        margin-right: 8px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        vertical-align: middle;
+       
+    }
+    .github-icon img {
+        display: none;
+    }
+}
     }
 
     .github-icon:hover img {
