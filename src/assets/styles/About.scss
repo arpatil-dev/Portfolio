@@ -2,7 +2,7 @@
     position: relative;
     
     // Add separator line at bottom
-        
+
 }
 
 .about-content {
@@ -56,6 +56,11 @@
                     font-size: 1.2rem;
                     margin-bottom: 10px;
                     color: #61dafb;
+                    
+                    .highlight-icon {
+                        color: #61dafb;
+                        margin-right: 8px;
+                    }
                 }
                 
                 p {
@@ -100,6 +105,11 @@
                     
                     h3 {
                         color: #0066cc;
+                        
+                        .highlight-icon {
+                            color: #0066cc;
+                            margin-right: 8px;
+                        }
                     }
                     
                     p {
