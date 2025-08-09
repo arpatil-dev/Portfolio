@@ -47,6 +47,53 @@
         margin-block-start: 0px;
         margin-block-end: 0px;
     }
+    
+    .resume-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        
+        .resume-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: "Lato", sans-serif;
+            
+            svg {
+                font-size: 1.2rem;
+            }
+            
+            &.view-btn {
+                background: linear-gradient(135deg, #61dafb, #4fa8c5);
+                color: white;
+                
+                &:hover {
+                    background: linear-gradient(135deg, #4fa8c5, #3d8ba8);
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 15px rgba(97, 218, 251, 0.3);
+                }
+            }
+            
+            &.download-btn {
+                background: linear-gradient(135deg, #5000ca, #7b2cbf);
+                color: white;
+                
+                &:hover {
+                    background: linear-gradient(135deg, #7b2cbf, #9a3dbd);
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 15px rgba(80, 0, 202, 0.3);
+                }
+            }
+        }
+    }
 }
 
 .about-section .image-wrapper {
@@ -145,6 +192,17 @@
             padding-left: 5%;
             padding-right: 5%;
             padding-bottom: 5%;
+            
+            .resume-buttons {
+                flex-direction: column;
+                gap: 10px;
+                
+                .resume-btn {
+                    font-size: 0.9rem;
+                    padding: 10px 20px;
+                    justify-content: center;
+                }
+            }
         }
 
         .about-section .image-wrapper {

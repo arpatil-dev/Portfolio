@@ -5,8 +5,8 @@ import mock03 from '../assets/images/Toggl.png';
 import mock04 from '../assets/images/Technotsav.png';
 import mock05 from '../assets/images/Dattamsh.png';
 import mock06 from '../assets/images/BNK.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
+import mock07 from '../assets/images/Gram.png';
+import mock08 from '../assets/images/Add.png';
 import mock09 from '../assets/images/mock09.png';
 import mock10 from '../assets/images/mock10.png';
 import '../assets/styles/Project.scss';
@@ -33,18 +33,28 @@ function Project() {
             </div>
             <div className="project">
                 <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>E-Commerce Web Application</h2></a>
-                <p>Full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment integration. Built with React.js frontend, Node.js/Express.js backend, and MongoDB database.</p>
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>Technotsav Website</h2></a>
+                <p>Developed a dynamic website for the Technotsav event, featuring event schedules, speaker profiles, and registration forms. Built with React.js and Node.js, ensuring a seamless user experience.</p>
             </div>
             <div className="project">
                 <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>Toggl – Drag-and-Drop Website Builder</h2></a>
-                <p>Developed a no-code website builder with intuitive drag-and-drop interface, domain linking capabilities, and hosting features. Implemented using MERN stack with JWT authentication and GrapeJS for the visual editor.</p>
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>Dattamsh Cinema Movie Booking System</h2></a>
+                <p>Developed a comprehensive cinema management system using HTML, CSS and vanilla JS, featuring movie listings, showtimes, and ticket booking functionalities.</p>
             </div>
             <div className="project">
                 <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>E-Commerce Web Application</h2></a>
-                <p>Full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment integration. Built with React.js frontend, Node.js/Express.js backend, and MongoDB database.</p>
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>Bank Management System using Java</h2></a>
+                <p>Developed a comprehensive bank management system using Java Swing, JDBC, and MySQL, featuring user authentication, account management, and transaction processing. Implemented with a focus on security and performance.</p>
+            </div>
+            <div className="project">
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>Grampanchyat Valivade Website</h2></a>
+                <p>Developed a dynamic website for the Grampanchyat Valivade, showcasing local news, events, and resources. Built with HTML and Node.js, featuring a user-friendly interface and responsive design.</p>
+            </div>
+            <div className="project">
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><h2>Student Admission Management System using VB.Net</h2></a>
+                <p>Developed a comprehensive student admission management system using VB.Net, featuring student registration, receipt generation using Crystal Reports (SAP), and data storing functionalities.</p>
             </div>
             
         </div>

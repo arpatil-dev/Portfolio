@@ -42,10 +42,35 @@ p, a, h1, h2, h3, h4, h5, label, button {
     font-family: "Lato", sans-serif;
     text-transform: initial;
     padding: 6px 10px;
+    margin: 0 2px;
   }
 
   svg {
     cursor: pointer;
+  }
+}
+
+// Responsive navigation for smaller screens
+@media (max-width: 1200px) {
+  .navigation-bar button {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+    margin: 0 1px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation-bar button {
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .navigation-bar button {
+    font-size: 0.85rem;
+    padding: 4px 5px;
   }
 }
 
@@ -114,6 +139,26 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
   .about-section {
     background-image: url("./assets/images/bg-light.png");
+    
+    .resume-buttons .resume-btn {
+      &.view-btn {
+        background: linear-gradient(135deg, #0066cc, #004499);
+        
+        &:hover {
+          background: linear-gradient(135deg, #004499, #003366);
+          box-shadow: 0 8px 15px rgba(0, 102, 204, 0.3);
+        }
+      }
+      
+      &.download-btn {
+        background: linear-gradient(135deg, #333, #555);
+        
+        &:hover {
+          background: linear-gradient(135deg, #555, #777);
+          box-shadow: 0 8px 15px rgba(51, 51, 51, 0.3);
+        }
+      }
+    }
   }
 
   .skills-container svg {
