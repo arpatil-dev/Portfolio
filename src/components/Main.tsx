@@ -6,7 +6,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import '../assets/styles/Main.scss';
-import PP from '../assets/images/Aryan-close-cropped.png';
+import PP from '../../public/Aryan-close-cropped.png';
 
 function Main() {
 
@@ -31,7 +31,7 @@ function Main() {
     <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
-          <img src={PP} alt="Avatar" />
+          <img src="https://arpatil.dev/Aryan-close-cropped.png" alt="Avatar" />
         </div>
         <div className="content">
           <div className="social_icons">
