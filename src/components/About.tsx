@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBullseye, faLightbulb, faRocket } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/About.scss';
 
 function About() {
@@ -21,17 +23,17 @@ function About() {
           
           <div className="about-highlights">
             <div className="highlight-item">
-              <h3>🎯 Core Focus</h3>
+              <h3><FontAwesomeIcon icon={faBullseye} className="highlight-icon" /> Core Focus</h3>
               <p>Full-Stack Web Development with MERN Stack</p>
             </div>
             
             <div className="highlight-item">
-              <h3>💡 Passion</h3>
+              <h3><FontAwesomeIcon icon={faLightbulb} className="highlight-icon" /> Passion</h3>
               <p>Creating scalable, user-friendly applications</p>
             </div>
             
             <div className="highlight-item">
-              <h3>🚀 Goal</h3>
+              <h3><FontAwesomeIcon icon={faRocket} className="highlight-icon" /> Goal</h3>
               <p>Building innovative solutions that make a difference</p>
             </div>
           </div>

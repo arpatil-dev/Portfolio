@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.1rem !important;
+  overflow-x: hidden;
 }
 
 code {
@@ -16,7 +17,9 @@ code {
 .main-container {
   position: relative;
   background-color: #0d1116;
-
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,56 +36,8 @@ p, a, h1, h2, h3, h4, h5, label, button {
   font-family: "Lato", sans-serif;
 }
 
-.navigation-bar {
-  justify-content: space-between;
-  background-color: #0d1116;
-
-  button {
-    font-size: 1.1rem;
-    font-family: "Lato", sans-serif;
-    text-transform: initial;
-    padding: 6px 10px;
-    margin: 0 2px;
-  }
-
-  svg {
-    cursor: pointer;
-  }
-}
-
-// Responsive navigation for smaller screens
-@media (max-width: 1200px) {
-  .navigation-bar button {
-    font-size: 0.95rem;
-    padding: 6px 8px;
-    margin: 0 1px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .navigation-bar button {
-    font-size: 0.9rem;
-    padding: 4px 6px;
-    margin: 0;
-  }
-}
-
-@media (max-width: 960px) {
-  .navigation-bar button {
-    font-size: 0.85rem;
-    padding: 4px 5px;
-  }
-}
-
-.navigation-bar-responsive {
-  span, p {
-    color: #0d1116;
-    font-family: "Lato", sans-serif;
-  }
-}
-
 .container {
-  margin-top: 64px;
+  margin-top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -120,10 +75,6 @@ p, a, h1, h2, h3, h4, h5, label, button {
 .light-mode {
   background-color: #f8f9fa;
 
-  .navigation-bar {
-    background-color: #f8f9fa;
-  }
-
   p, a, h1, h2, h3, h4, h5, label, button {
     color: #0d1116;
   }
@@ -131,10 +82,6 @@ p, a, h1, h2, h3, h4, h5, label, button {
   a:hover {
     color: #5000ca;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-  }
-
-  .navigation-bar svg {
-    color: #0d1116;
   }
 
   .about-section {

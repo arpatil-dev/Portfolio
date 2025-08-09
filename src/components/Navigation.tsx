@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import List from '@mui/material/List';
+import MenuIcon from '@mui/icons-material/Menu';
 import ListIcon from '@mui/icons-material/List';
+import Drawer from '@mui/material/Drawer';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import '../assets/styles/Navigation.scss';
 
 const drawerWidth = 240;
 const navItems = [
@@ -33,6 +30,7 @@ function Navigation({parentToChild, modeChange}: any) {
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>('about');
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -45,6 +43,21 @@ function Navigation({parentToChild, modeChange}: any) {
         const scrolled = window.scrollY > navbar.clientHeight;
         setScrolled(scrolled);
       }
+
+      // Track active section
+      const sections = navItems.map(item => item[1]);
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (currentSection && currentSection !== activeSection) {
+        setActiveSection(currentSection);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -52,7 +65,7 @@ function Navigation({parentToChild, modeChange}: any) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [activeSection]);
 
   const scrollToSection = (section: string) => {
     console.log('Scrolling to section:', section)
@@ -82,50 +95,72 @@ function Navigation({parentToChild, modeChange}: any) {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
-        <Toolbar className='navigation-bar'>
+    <>
+      {/* Desktop Side Dot Navigation */}
+      <nav className="side-nav-container">
+        {/* Theme Toggle */}
+        <div className="theme-toggle">
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            className="theme-icon"
+            onClick={() => modeChange()}
+            aria-label="toggle theme"
           >
-            <MenuIcon />
+            {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
           </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
-          )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
+        </div>
+
+        {/* Side Dot Navigation */}
+        <div className="side-nav">
+          {navItems.map((item, index) => (
+            <div
+              key={item[0]}
+              className={`nav-dot ${activeSection === item[1] ? 'active' : ''}`}
+              onClick={() => scrollToSection(item[1])}
+              title={item[0]}
+            >
+              <span className="dot"></span>
+              <span className="nav-label">{item[0]}</span>
+            </div>
+          ))}
+        </div>
       </nav>
-    </Box>
+
+      {/* Mobile Menu Toggle */}
+      <div className="mobile-menu-toggle">
+        <IconButton
+          onClick={handleDrawerToggle}
+          aria-label="open drawer"
+          className="mobile-toggle-btn"
+        >
+          <MenuIcon />
+        </IconButton>
+        
+        {/* Theme Toggle for Mobile */}
+        <IconButton
+          className="mobile-theme-icon"
+          onClick={() => modeChange()}
+          aria-label="toggle theme"
+        >
+          {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+        </IconButton>
+      </div>
+
+      {/* Mobile Drawer */}
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true,
+        }}
+        sx={{
+          display: { xs: 'block', sm: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+        }}
+      >
+        {drawer}
+      </Drawer>
+    </>
   );
 }
 
