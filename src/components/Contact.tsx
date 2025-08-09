@@ -1,10 +1,14 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
+import CircularProgress from '@mui/material/CircularProgress';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import { EMAIL_CONFIG } from '../config/emailConfig';
 
 function Contact() {
 
@@ -15,38 +19,92 @@ function Contact() {
   const [nameError, setNameError] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
+  
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [emailStatus, setEmailStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState<string>('');
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = async (e: any) => {
     e.preventDefault();
+    
+    // Reset status
+    setEmailStatus('idle');
+    setStatusMessage('');
 
-    setNameError(name === '');
-    setEmailError(email === '');
-    setMessageError(message === '');
+    // Validate form
+    const nameValid = name.trim() !== '';
+    const emailValid = email.trim() !== '' && isValidEmail(email);
+    const messageValid = message.trim() !== '';
 
-    /* Uncomment below if you want to enable the emailJS */
+    setNameError(!nameValid);
+    setEmailError(!emailValid);
+    setMessageError(!messageValid);
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
+    if (!nameValid || !emailValid || !messageValid) {
+      setEmailStatus('error');
+      setStatusMessage('Please fill in all fields correctly.');
+      return;
+    }
 
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+    setIsLoading(true);
+
+    try {
+      // Check if EmailJS is configured
+      const isConfigured = EMAIL_CONFIG.SERVICE_ID !== 'YOUR_SERVICE_ID';
+      
+      if (isConfigured) {
+        // Real EmailJS implementation
+        const templateParams = {
+          from_name: name,
+          from_email: email,
+          message: message,
+          to_name: 'Aryan Patil',
+        };
+
+        const result = await emailjs.send(
+          EMAIL_CONFIG.SERVICE_ID,
+          EMAIL_CONFIG.TEMPLATE_ID,
+          templateParams,
+          EMAIL_CONFIG.PUBLIC_KEY
+        );
+
+        console.log('Email sent successfully:', result);
+        setEmailStatus('success');
+        setStatusMessage('Message sent successfully! I\'ll get back to you soon.');
+      } else {
+        // Demo mode - simulate email sending
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate delay
+        
+        console.log('Demo mode: Email would be sent with:', {
+          from_name: name,
+          from_email: email,
+          message: message,
+          to_name: 'Aryan Patil',
+        });
+        
+        setEmailStatus('success');
+        setStatusMessage('Demo mode: Message "sent" successfully! (Configure EmailJS for real emails)');
+      }
+      
+      // Clear form
+      setName('');
+      setEmail('');
+      setMessage('');
+      
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setEmailStatus('error');
+      setStatusMessage('Failed to send message. Please try again or contact me directly.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   return (
@@ -103,9 +161,24 @@ function Contact() {
               error={messageError}
               helperText={messageError ? "Please enter the message" : ""}
             />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
+            <Button 
+              variant="contained" 
+              endIcon={isLoading ? <CircularProgress size={20} color="inherit" /> : <SendIcon />}
+              onClick={sendEmail}
+              disabled={isLoading}
+              className={`send-button ${emailStatus}`}
+            >
+              {isLoading ? 'Sending...' : 'Send Message'}
             </Button>
+            
+            {/* Status Message */}
+            {emailStatus !== 'idle' && (
+              <div className={`status-message ${emailStatus}`}>
+                {emailStatus === 'success' && <CheckCircleIcon />}
+                {emailStatus === 'error' && <ErrorIcon />}
+                <span>{statusMessage}</span>
+              </div>
+            )}
           </Box>
         </div>
       </div>
