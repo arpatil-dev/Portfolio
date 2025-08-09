@@ -1,8 +1,10 @@
 #education {
     position: relative;
     
-    // Add separator line at bottom
-    
+    // Timeline icon theme-aware styles
+    .vertical-timeline-element-icon {
+        background: #ff6b6b !important; // Dark mode default (red/pink)
+    }
     
     .items-container {
         padding: 5% 10%;
@@ -24,6 +26,11 @@
     
     .items-container h1 {
         color: #333;
+    }
+    
+    // Light mode timeline icon
+    .vertical-timeline-element-icon {
+        background: #00695c !important; // Teal theme for light mode education
     }
 }
 

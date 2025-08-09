@@ -10,16 +10,17 @@ function About() {
         <h1>About Me</h1>
         <div className="about-text">
           <p>
-            I'm <strong>Aryan Patil</strong>, a passionate Computer Science student from Kolhapur, India, with a solid foundation in full-stack web development and software engineering. Currently pursuing my B.Tech in Computer Science & Engineering with an impressive CGPA of 8.4/10.
-          </p>
-          
-          <p>
-            My journey in technology began during my diploma studies, where I developed a strong foundation in programming and computer engineering fundamentals. Since then, I've gained hands-on experience through internships and real-world projects, working with modern technologies like the MERN stack (MongoDB, Express.js, React.js, Node.js).
-          </p>
-          
-          <p>
-            I'm a <strong>quick learner</strong> with a <strong>collaborative mindset</strong> and a passion for creating user-friendly, efficient solutions. My experience includes working with development teams, contributing to web-based projects, and building innovative applications like real-time collaboration tools and AI-powered platforms.
-          </p>
+  I'm <strong>Aryan Patil</strong>, a results-driven <strong>Full Stack Developer</strong> from Kolhapur, India, specializing in building scalable, user-centric applications. Skilled in the <strong>MERN stack</strong> (MongoDB, Express.js, React.js, Node.js), I deliver high-quality web solutions with clean, maintainable code and a strong focus on performance.
+</p>
+
+<p>
+  My journey in technology began during my diploma studies, where I built a solid foundation in programming and <strong>computer engineering fundamentals</strong>. Since then, I have gained hands-on experience through internships and real-world projects, creating solutions that range from <strong>real-time collaboration platforms</strong> to <strong>AI-powered tools</strong>.
+</p>
+
+<p>
+  I'm a <strong>quick learner</strong> with a <strong>collaborative mindset</strong> and a passion for crafting efficient, user-friendly solutions. My experience includes working in <strong>development teams</strong>, contributing to high-impact projects, and continuously adapting to emerging technologies to stay ahead in the industry.
+</p>
+
           
           <div className="about-highlights">
             <div className="highlight-item">
