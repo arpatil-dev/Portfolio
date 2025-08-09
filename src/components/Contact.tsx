@@ -108,78 +108,87 @@ function Contact() {
   };
 
   return (
-    <div id="contact">
-      <div className="items-container">
-        <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
-          <Box
-            ref={form}
-            component="form"
-            noValidate
-            autoComplete="off"
-            className='contact-form'
-          >
-            <div className='form-flex'>
-              <TextField
-                required
-                id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-              />
-              <TextField
-                required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
-              />
+    <div id="contact" className="contact-section">
+      <div className="contact-container">
+        <div className="contact-card">
+          <div className="contact-header">
+            <h1 className="contact-title">Let's Work Together</h1>
+            <p className="contact-subtitle">Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          </div>
+          <form className="contact-form" ref={form} onSubmit={sendEmail}>
+            <div className="form-group">
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className={`form-input ${nameError ? 'error' : ''}`}
+                  placeholder=" "
+                  required
+                />
+                <label htmlFor="name" className="form-label">Your Name</label>
+                {nameError && <span className="error-message">Please enter your name</span>}
+              </div>
+              
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={`form-input ${emailError ? 'error' : ''}`}
+                  placeholder=" "
+                  required
+                />
+                <label htmlFor="email" className="form-label">Email / Phone</label>
+                {emailError && <span className="error-message">Please enter your email or phone</span>}
+              </div>
             </div>
-            <TextField
-              required
-              id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-            />
-            <Button 
-              variant="contained" 
-              endIcon={isLoading ? <CircularProgress size={20} color="inherit" /> : <SendIcon />}
-              onClick={sendEmail}
-              disabled={isLoading}
-              className={`send-button ${emailStatus}`}
-            >
-              {isLoading ? 'Sending...' : 'Send Message'}
-            </Button>
             
-            {/* Status Message */}
+            <div className="input-wrapper">
+              <textarea
+                id="message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className={`form-textarea ${messageError ? 'error' : ''}`}
+                placeholder=" "
+                rows={6}
+                required
+              />
+              <label htmlFor="message" className="form-label">Message</label>
+              {messageError && <span className="error-message">Please enter your message</span>}
+            </div>
+            
+            <button 
+              type="submit" 
+              className={`submit-btn ${isLoading ? 'loading' : ''} ${emailStatus}`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  <div className="loading-spinner"></div>
+                  Sending...
+                </>
+              ) : (
+                <>
+                  Send Message
+                  <SendIcon className="send-icon" />
+                </>
+              )}
+            </button>
+            
             {emailStatus !== 'idle' && (
               <div className={`status-message ${emailStatus}`}>
-                {emailStatus === 'success' && <CheckCircleIcon />}
-                {emailStatus === 'error' && <ErrorIcon />}
+                {emailStatus === 'success' && <CheckCircleIcon className="status-icon" />}
+                {emailStatus === 'error' && <ErrorIcon className="status-icon" />}
                 <span>{statusMessage}</span>
               </div>
             )}
-          </Box>
+          </form>
         </div>
       </div>
     </div>
