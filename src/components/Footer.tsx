@@ -13,6 +13,8 @@ function Footer() {
         <a href="https://www.instagram.com/___sohammmm/" target="_blank" rel="noreferrer"><InstagramIcon /></a>
       </div>
       <p>Your vision, my code.</p>
+      <p>&copy; 2025 Aryan Patil. All Rights Reserved.</p>
+
     </footer>
   );
 }

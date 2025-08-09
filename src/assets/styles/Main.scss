@@ -74,6 +74,7 @@
             &.view-btn {
                 background: linear-gradient(135deg, #61dafb, #4fa8c5);
                 color: white;
+                border: 1px solid transparent;
                 
                 &:hover {
                     background: linear-gradient(135deg, #4fa8c5, #3d8ba8);
@@ -83,15 +84,76 @@
             }
             
             &.download-btn {
-                background: linear-gradient(135deg, #5000ca, #7b2cbf);
+                background: linear-gradient(135deg, #ff6b6b, #ee5a52);
                 color: white;
+                border: 1px solid transparent;
                 
                 &:hover {
-                    background: linear-gradient(135deg, #7b2cbf, #9a3dbd);
+                    background: linear-gradient(135deg, #ee5a52, #dc4c3e);
                     transform: translateY(-2px);
-                    box-shadow: 0 8px 15px rgba(80, 0, 202, 0.3);
+                    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.3);
                 }
             }
+        }
+    }
+}
+
+// Light mode styles for Main section
+.light-mode .about-section {
+    background-image: url("../images/bg-light.png");
+    
+    .content {
+        .social_icons {
+            color: #333;
+            
+            a {
+                color: #000;
+                
+                &:hover {
+                    color: #ffffff;
+                    filter: drop-shadow(0 0 6px #333);
+                }
+            }
+        }
+        
+        .resume-buttons {
+            .resume-btn {
+                &.view-btn {
+                    background: linear-gradient(135deg, #1976d2, #1565c0);
+                    color: white;
+                    border: 1px solid transparent;
+                    
+                    &:hover {
+                        background: linear-gradient(135deg, #1565c0, #0d47a1);
+                        box-shadow: 0 8px 15px rgba(25, 118, 210, 0.3);
+                    }
+                }
+                
+                &.download-btn {
+                    background: linear-gradient(135deg, #00695c, #004d40);
+                    color: white;
+                    border: 1px solid transparent;
+                    
+                    &:hover {
+                        background: linear-gradient(135deg, #004d40, #00251a);
+                        box-shadow: 0 8px 15px rgba(0, 105, 92, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Light mode mobile social icons
+.light-mode .about-section .content .mobile_social_icons {
+    color: #333;
+    
+    a {
+        color: #000;
+        
+        &:hover {
+            color: #ebe8e8;
+            filter: drop-shadow(0 0 6px #ff0b0b);
         }
     }
 }
