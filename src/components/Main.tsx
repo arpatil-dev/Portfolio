@@ -28,7 +28,7 @@ function Main() {
   };
 
   return (
-    <div className="container">
+    <div className="container" id="main">
       <div className="about-section">
         <div className="image-wrapper">
           {/* <img src="https://arpatil.dev/Aryan-close-cropped.png" alt="Avatar" /> */}

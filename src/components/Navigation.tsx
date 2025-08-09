@@ -15,6 +15,7 @@ import '../assets/styles/Navigation.scss';
 
 const drawerWidth = 240;
 const navItems = [
+  ['Home', 'main'],
   ['About', 'about'],
   ['Expertise', 'expertise'], 
   ['Skills', 'skills'], 
