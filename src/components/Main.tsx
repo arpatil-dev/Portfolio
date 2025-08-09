@@ -55,7 +55,8 @@ function Main() {
 
           <div className="mobile_social_icons">
             <a href="https://github.com/arpatil-dev" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-            <a href="https://www.linkedin.com/in/aryan-patil" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a href="https://www.linkedin.com/in/aryan-patil-381643290/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a href="https://www.instagram.com/___sohammmm/" target="_blank" rel="noreferrer"><InstagramIcon /></a>
           </div>
         </div>
       </div>
