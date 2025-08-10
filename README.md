@@ -12,5 +12,9 @@ Personal portfolio website showcasing my projects, skills, and experience as a F
 - 💻 GitHub: [arpatil-dev](https://github.com/arpatil-dev)
 - 📍 Location: Kolhapur, India
 
-<img width="2836" height="1518" alt="Screenshot 2025-08-10 021522" src="https://github.com/user-attachments/assets/1ef0288f-84ef-412a-a633-8eabfd981872" />
-<img width="2844" height="1529" alt="Screenshot 2025-08-10 021536" src="https://github.com/user-attachments/assets/aa955ec4-537c-4e60-a7de-381bd64231a7" />
+## Dark Mode
+<img width="2845" height="1519" alt="Screenshot 2025-08-11 020430" src="https://github.com/user-attachments/assets/c40ad435-0c5d-4fc4-ba3b-49b6400641a2" />
+
+## Light Mode
+<img width="2843" height="1519" alt="Screenshot 2025-08-11 020443" src="https://github.com/user-attachments/assets/5e8766fe-0611-45ab-922a-16f494eb0091" />
+
