@@ -17,11 +17,25 @@ function Education() {
             date="Jun 2023 - Sep 2026"
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
-            <h3 className="vertical-timeline-element-title">B.Tech in Computer Science & Engineering</h3>
-            <h4 className="vertical-timeline-element-subtitle">D. Y. Patil College of Engineering and Technology</h4>
-            <p className="location">Kolhapur, Maharashtra</p>
-            <p className="grade">CGPA: 8.4/10</p>
-            <p>
+            <div className="education-details">
+              <div className="detail-item">
+                <span className="detail-label">Course:</span>
+                <span className="detail-value">B.Tech in Computer Science & Engineering</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">College:</span>
+                <span className="detail-value">D. Y. Patil College of Engineering and Technology</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Location:</span>
+                <span className="detail-value">Kolhapur, Maharashtra</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">CGPA:</span>
+                <span className="detail-value">8.4/10</span>
+              </div>
+            </div>
+            <p className="description">
               Currently pursuing Bachelor's degree with focus on software engineering, data structures, algorithms, and full-stack development. Strong academic performance with hands-on project experience.
             </p>
           </VerticalTimelineElement>
@@ -30,11 +44,25 @@ function Education() {
             date="Sep 2020 - May 2023"
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
-            <h3 className="vertical-timeline-element-title">Diploma in Computer Engineering</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ashokrao Mane Polytechnic</h4>
-            <p className="location">Vathar, Maharashtra</p>
-            <p className="grade">Percentage: 89%</p>
-            <p>
+            <div className="education-details">
+              <div className="detail-item">
+                <span className="detail-label">Course:</span>
+                <span className="detail-value">Diploma in Computer Engineering</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">College:</span>
+                <span className="detail-value">Ashokrao Mane Polytechnic</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Location:</span>
+                <span className="detail-value">Vathar, Maharashtra</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Percentage:</span>
+                <span className="detail-value">89%</span>
+              </div>
+            </div>
+            <p className="description">
               Comprehensive foundation in computer engineering fundamentals, programming languages, and software development principles. Excellent academic achievement with strong technical skills.
             </p>
           </VerticalTimelineElement>

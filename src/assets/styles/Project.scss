@@ -7,7 +7,7 @@
 .project-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 10px;
     gap: 15px;
     margin-top: 20px;
@@ -71,6 +71,7 @@
         font-size: 0.9rem;
         flex-shrink: 0;
         margin-top: 5px;
+        align-self: flex-start;
         
         &:hover {
             background: var(--primary-color);
@@ -151,7 +152,7 @@
         font-weight: 600;
         text-align: center;
         border-radius: 16px;
-        margin-top: 2px;
+        margin-top: 8px;
         padding: 2.5px 12px;
         position: relative;
         letter-spacing: 0.5px;
@@ -255,7 +256,7 @@
     }
 
     .project:hover .github-icon {
-        transform: scale(1.15);
+        // transform: scale(1.15);
     }
 
     .github-icon img {
@@ -336,4 +337,8 @@
 }
 .project p {
     color: rgba(227, 227, 227, 0.8);
+}
+
+.project h2{
+    font-size: 1.3rem;
 }
