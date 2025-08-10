@@ -17,10 +17,20 @@ footer {
         text-decoration: none;
 
         &:hover {
-            text-decoration: underline;
             color: white;
-            /* glow effect */
             filter: drop-shadow(0 0 6px white);
+        }
+    }
+}
+
+// Light mode footer social icons
+.light-mode footer {
+    div a {
+        color: #333;
+        
+        &:hover {
+            color: #000;
+            filter: drop-shadow(0 0 6px #000);
         }
     }
 }

@@ -134,8 +134,8 @@
         color: #000;
         
         &:hover {
-            color: #ebe8e8;
-            filter: drop-shadow(0 0 6px #ff0b0b);
+            color: #000;
+            filter: drop-shadow(0 0 6px #000);
         }
     }
 }
@@ -223,6 +223,15 @@
             svg {
                 font-size: 1.8em;
             }
+            
+            a {
+                color: white;
+                
+                &:hover {
+                    color: white;
+                    filter: drop-shadow(0 0 6px white);
+                }
+            }
         }
 
         .about-section {
@@ -264,9 +273,17 @@
     text-decoration: none;
 
     &:hover {
-        text-decoration: underline;
         color: white;
-        /* glow effect */
         filter: drop-shadow(0 0 6px white);
+    }
+}
+
+// Light mode social icons hover
+.light-mode .social_icons a {
+    color: #333;
+    
+    &:hover {
+        color: #000;
+        filter: drop-shadow(0 0 6px #000);
     }
 }
