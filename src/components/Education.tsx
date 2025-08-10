@@ -21,7 +21,7 @@ function Education() {
             <h4 className="vertical-timeline-element-subtitle">D. Y. Patil College of Engineering and Technology</h4>
             <p className="location">Kolhapur, Maharashtra</p>
             <p className="description">
-              Currently pursuing Bachelor's degree with focus on software engineering, data structures, algorithms, and full-stack development. Strong academic performance with hands-on project experience.
+              Currently pursuing Bachelor's degree with focus on software engineering, data structures, algorithms, and full-stack development. Strong academic performance with hands-on project experience. <strong>CGPA: 8.4/10</strong>
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -33,7 +33,19 @@ function Education() {
             <h4 className="vertical-timeline-element-subtitle">Ashokrao Mane Polytechnic</h4>
             <p className="location">Vathar, Maharashtra</p>
             <p className="description">
-              Comprehensive foundation in computer engineering fundamentals, programming languages, and software development principles. Excellent academic achievement with strong technical skills.
+              Comprehensive foundation in computer engineering fundamentals, programming languages, and software development principles. Excellent academic achievement with strong technical skills. <strong>Percentage: 89%</strong>
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2010 - 2020"
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+          >
+            <h3 className="vertical-timeline-element-title">Secondary School Certificate (SSC)</h3>
+            <h4 className="vertical-timeline-element-subtitle">Kolhapur Public School</h4>
+            <p className="location">Kolhapur, Maharashtra</p>
+            <p className="description">
+              Completed Secondary School Certificate (SSC), building foundational knowledge in core subjects.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

@@ -109,13 +109,10 @@
         
         .resume-buttons {
             .resume-btn {
-                
-                
                 &.download-btn {
                     background: var(--gradient-warning);
                     color: var(--dark-text-primary);
-                    border: 1px solid transparent;
-                    
+                   
                     &:hover {
                         background: linear-gradient(135deg, var(--warning-hover), var(--warning-dark));
                         box-shadow: 0 8px 15px rgba(0, 105, 92, 0.3);
