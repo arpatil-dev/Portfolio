@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import '../assets/styles/Main.scss';
 import PP from '../assets/images/Aryan-close-cropped.avif';
+import PP_SPECS from '../assets/images/Aryan-Patil.avif';
 
 function Main() {
 
@@ -32,7 +33,8 @@ function Main() {
       <div className="about-section">
         <div className="image-wrapper">
           {/* <img src="https://arpatil.dev/Aryan-close-cropped.png" alt="Avatar" /> */}
-          <img src={PP} alt="Avatar" />
+          <img src={PP_SPECS} alt="Avatar" />
+          {/* <img src={PP} alt="Avatar" /> */}
         </div>
         <div className="content">
           <div className="social_icons">
