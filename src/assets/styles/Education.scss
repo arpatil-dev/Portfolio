@@ -61,45 +61,24 @@
         color: var(--dark-text-primary) !important;
     }
     
+    // College name styling with primary color and smaller font
+    h4 {
+        color: var(--primary-color) !important;
+        font-size: var(--font-size-small) !important;
+        font-weight: var(--font-weight-medium) !important;
+    }
+    
+    // Location styling
+    .location {
+        color: var(--dark-text-secondary) !important;
+        font-size: var(--font-size-small) !important;
+        font-style: italic !important;
+        margin: 8px 0 !important;
+    }
+    
     p {
         color: var(--dark-text-secondary) !important;
     }
-}
-
-// Education details styling
-.education-details {
-    margin-bottom: 16px;
-    
-    .detail-item {
-        display: flex;
-        align-items: baseline;
-        margin-bottom: 8px;
-        gap: 8px;
-        
-        .detail-label {
-            font-weight: var(--font-weight-semibold);
-            color: var(--primary-color);
-            font-size: var(--font-size-small);
-            line-height: var(--line-height-normal);
-            min-width: 80px;
-            flex-shrink: 0;
-        }
-        
-        .detail-value {
-            color: var(--dark-text-primary);
-            font-size: var(--font-size-small);
-            font-weight: var(--font-weight-regular);
-            line-height: var(--line-height-normal);
-        }
-    }
-}
-
-.description {
-    margin-top: 16px !important;
-    padding-top: 12px !important;
-    border-top: 1px solid rgba(97,218,251,0.2) !important;
-    font-style: italic !important;
-    line-height: 1.6 !important;
 }
 
 // Light mode styles
@@ -143,59 +122,23 @@
             color: var(--light-text-primary) !important;
         }
         
+        // College name in light mode
+        h4 {
+            color: var(--success-color) !important;
+        }
+        
+        // Location in light mode
+        .location {
+            color: var(--light-text-secondary) !important;
+        }
+        
         p {
             color: var(--light-text-secondary) !important;
         }
     }
-    
-    // Light mode education details
-    .education-details {
-        .detail-item {
-            .detail-label {
-                color: var(--success-color);
-            }
-            
-            .detail-value {
-                color: var(--light-text-primary);
-            }
-        }
-    }
-    
-    .description {
-        border-top-color: rgba(25, 118, 210, 0.2) !important;
-    }
 }
 
-.location {
-    font-style: italic !important;
-    color: var(--dark-text-muted) !important;
-    margin-bottom: 5px !important;
-    font-size: 0.9rem !important;
-}
-
-.grade {
-    font-weight: bold !important;
-    color: var(--primary-color) !important;
-    margin-bottom: 10px !important;
-    font-size: 1rem !important;
-}
-
-// Light mode text colors
-.light-mode #education {
-    .location {
-        color: var(--light-text-muted) !important;
-    }
-    
-    .grade {
-        color: var(--success-color) !important;
-    }
-}
-
-// Remove default timeline icon styling since we're using custom styling above
-// .vertical-timeline-element--education .vertical-timeline-element-icon {
-//     background: #ff6b6b !important;
-// }
-
+// Mobile responsiveness  
 @media screen and (max-width: 1170px) {
     #education .items-container {
         padding: 5% 5%;

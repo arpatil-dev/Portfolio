@@ -61,6 +61,21 @@
         color: var(--dark-text-primary) !important;
     }
     
+    // Company name styling with primary color and smaller font
+    h4 {
+        color: var(--primary-color) !important;
+        font-size: var(--font-size-small) !important;
+        font-weight: var(--font-weight-medium) !important;
+    }
+    
+    // Location styling
+    .location {
+        color: var(--dark-text-secondary) !important;
+        font-size: var(--font-size-small) !important;
+        font-style: italic !important;
+        margin: 8px 0 !important;
+    }
+    
     p {
         color: var(--dark-text-secondary) !important;
     }
@@ -107,31 +122,23 @@
             color: var(--light-text-primary) !important;
         }
         
+        // Company name in light mode
+        h4 {
+            color: var(--success-color) !important;
+        }
+        
+        // Location in light mode
+        .location {
+            color: var(--light-text-secondary) !important;
+        }
+        
         p {
             color: var(--light-text-secondary) !important;
         }
     }
 }
 
-.location {
-    font-style: italic !important;
-    color: var(--dark-text-muted) !important;
-    margin-bottom: 10px !important;
-    font-size: 0.9rem !important;
-}
-
-// Light mode text colors
-.light-mode #experience {
-    .location {
-        color: var(--light-text-muted) !important;
-    }
-}
-
-// Remove default timeline icon styling since we're using custom styling above
-// .vertical-timeline-element--work .vertical-timeline-element-icon {
-//     background: var(--primary-color) !important;
-// }
-
+// Mobile responsiveness
 @media screen and (max-width: 1170px) {
     #experience .items-container {
         padding: 5% 5%;
