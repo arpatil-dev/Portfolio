@@ -143,7 +143,7 @@ function Contact() {
                   placeholder=" "
                   required
                 />
-                <label htmlFor="email" className="form-label">Email / Phone</label>
+                <label htmlFor="email" className="form-label">Email</label>
                 {emailError && <span className="error-message">Please enter your email or phone</span>}
               </div>
             </div>
