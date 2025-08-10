@@ -147,6 +147,13 @@
             font-size: 2rem;
         }
     }
+    
+    // Mobile date visibility fix for dark mode
+    .vertical-timeline-element-date {
+        color: var(--dark-text-primary) !important;
+        font-weight: var(--font-weight-medium) !important;
+        font-size: var(--font-size-small) !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -154,5 +161,27 @@
         h1 {
             font-size: 1.8rem;
         }
+    }
+    
+    // Enhanced mobile date styling
+    .vertical-timeline-element-date {
+        color: var(--dark-text-primary) !important;
+        background: rgba(97, 218, 251, 0.1) !important;
+        padding: 4px 8px !important;
+        border-radius: 6px !important;
+        border: 1px solid rgba(97, 218, 251, 0.3) !important;
+        font-weight: var(--font-weight-semibold) !important;
+        font-size: var(--font-size-small) !important;
+    }
+}
+
+// Light mode mobile date styling
+.light-mode .vertical-timeline-element-date {
+    color: var(--light-text-primary) !important;
+    
+    @media screen and (max-width: 768px) {
+        background: rgba(25, 118, 210, 0.1) !important;
+        border: 1px solid rgba(25, 118, 210, 0.3) !important;
+        color: var(--light-text-primary) !important;
     }
 }
