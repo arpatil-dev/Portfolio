@@ -54,21 +54,23 @@
 }
 
 .contact-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
   background: linear-gradient(135deg, #61dafb 0%, #e3e3e3 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 12px 0;
-  letter-spacing: -0.5px;
 }
 
 .contact-subtitle {
-  font-size: 1.1rem;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
   color: rgba(227,227,227,0.8);
   margin: 0;
-  line-height: 1.6;
 }
 
 .contact-form {
@@ -95,7 +97,9 @@
   border: 2px solid rgba(97,218,251,0.2);
   border-radius: 12px;
   padding: 16px 20px;
-  font-size: 1rem;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: #fff;
   transition: all 0.3s ease;
   outline: none;
