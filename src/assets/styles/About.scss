@@ -140,6 +140,7 @@
         .about-text {
             p {
                 font-size: 1rem;
+                text-align: justify;
             }
             
             .about-highlights {
@@ -156,6 +157,7 @@
                     
                     p {
                         font-size: 0.9rem;
+                        text-align: center;
                     }
                 }
             }
@@ -166,11 +168,14 @@
 @media (max-width: 480px) {
     .about-content {
         .about-text {
-            text-align: center;
+            p {
+                text-align: justify;
+            }
             
             .about-highlights {
                 .highlight-item {
                     padding: 15px;
+                    text-align: center;
                 }
             }
         }

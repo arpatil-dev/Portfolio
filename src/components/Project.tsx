@@ -47,7 +47,7 @@ function Project() {
             image: mock03,
             title: "Toggl – Drag-and-Drop Website Builder",
             description: "Developed a no-code website builder with intuitive drag-and-drop interface, domain linking capabilities, and hosting features. Implemented using MERN stack with JWT authentication and GrapeJS for the visual editor.",
-            demoLink: "https://github.com/TogglHQ/toggl-v2",
+            demoLink: "https://www.toggl.app/",
             githubLink: "https://github.com/TogglHQ/toggl-v2"
         },
         {
@@ -125,7 +125,14 @@ function Project() {
                             <div className={`project-description ${expandedProjects[project.id] ? 'expanded' : 'collapsed'}`}>
                                 <p>{project.description}
                                     <br/>
-                                    <a href={project.githubLink} target="_blank" rel="noreferrer" className="github-icon"><span className="github-label-mobile">GitHub</span></a>
+                                    <a href={project.githubLink} target="_blank" rel="noreferrer" className="github-icon">
+                                        <span className="github-label-mobile">GitHub</span>
+                                    </a>
+                                    {project.demoLink !== project.githubLink && (
+                                        <a href={project.demoLink} target="_blank" rel="noreferrer">
+                                            <span className="github-label-mobile">View</span>
+                                        </a>
+                                    )}
                                 </p>
                                 
                             </div>

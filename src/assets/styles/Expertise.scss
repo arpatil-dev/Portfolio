@@ -81,6 +81,11 @@
             margin-left: auto;
             margin-right: auto;
             color: var(--dark-text-secondary);
+            
+            strong {
+                color: var(--primary-color);
+                font-weight: var(--font-weight-semibold);
+            }
         }
         
         svg {
@@ -131,6 +136,10 @@
         
         p {
             color: var(--light-text-secondary);
+            
+            strong {
+                color: var(--success-color);
+            }
         }
         
         svg {
@@ -163,6 +172,7 @@
             p {
                 font-size: 1.1rem;
                 line-height: 1.6;
+                text-align: justify;
             }
         }
     }
@@ -181,6 +191,7 @@
             p {
                 font-size: 1rem;
                 line-height: 1.5;
+                text-align: justify;
             }
         }
     }

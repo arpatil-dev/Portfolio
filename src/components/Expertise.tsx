@@ -14,10 +14,15 @@ function Expertise() {
                     <FontAwesomeIcon icon={faReact} size="4x"/>
                     <h2>Full Stack Web Developer</h2>
                     <p>
-                        Computer Science student with a solid foundation in full-stack web development, data structures, and software engineering. 
-                        Proficient in building modern web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). 
-                        Strong foundation in both frontend and backend development with experience in creating user-friendly, efficient solutions, 
-                        REST APIs, and database management. Quick learner with a collaborative mindset and a passion for creating scalable web applications.
+                        Experienced <strong>Full Stack Developer</strong> specializing in the <strong>MERN stack</strong> with expertise in building scalable web applications. I create complete solutions from database design to user interfaces using modern development practices.
+                    </p>
+                    
+                    <p>
+                        Proficient in <strong>React.js, Node.js, and Express.js</strong> with focus on performance optimization and responsive design. I develop comprehensive API solutions, implement database management systems, and create intuitive user experiences.
+                    </p>
+                    
+                    <p>
+                        My collaborative approach and adaptability to emerging technologies enable me to deliver <strong>robust applications</strong> that exceed expectations while maintaining clean, maintainable code.
                     </p>
                 </div>
             </div>
