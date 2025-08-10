@@ -197,11 +197,11 @@
     @media (max-width:768px) {
         .about-section h1 {
             font-size: 4em !important;
-            text-align: left;
+            text-align: center;
         }
 
         .about-section p {
-            text-align: left;
+            text-align: center;
         }
 
         .container {
@@ -218,6 +218,7 @@
             flex-direction: row;
             gap: 10px;
             color: white;
+            justify-content: center;
     
             svg {
                 font-size: 1.8em;
@@ -236,10 +237,12 @@
             padding-left: 5%;
             padding-right: 5%;
             padding-bottom: 5%;
+            text-align: center;
             
             .resume-buttons {
                 flex-direction: column;
                 gap: 10px;
+                align-items: center;
                 
                 .resume-btn {
                     font-size: 0.9rem;
@@ -250,8 +253,9 @@
         }
 
         .about-section .image-wrapper {
-            padding-left: 5%;
+            // padding-left: 5%;
             width: 100%;
+            text-align: center;
         }
     }
 }
