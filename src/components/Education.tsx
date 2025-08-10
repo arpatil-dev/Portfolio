@@ -30,10 +30,7 @@ function Education() {
                 <span className="detail-label">Location:</span>
                 <span className="detail-value">Kolhapur, Maharashtra</span>
               </div>
-              <div className="detail-item">
-                <span className="detail-label">CGPA:</span>
-                <span className="detail-value">8.4/10</span>
-              </div>
+              
             </div>
             <p className="description">
               Currently pursuing Bachelor's degree with focus on software engineering, data structures, algorithms, and full-stack development. Strong academic performance with hands-on project experience.
@@ -57,10 +54,7 @@ function Education() {
                 <span className="detail-label">Location:</span>
                 <span className="detail-value">Vathar, Maharashtra</span>
               </div>
-              <div className="detail-item">
-                <span className="detail-label">Percentage:</span>
-                <span className="detail-value">89%</span>
-              </div>
+              
             </div>
             <p className="description">
               Comprehensive foundation in computer engineering fundamentals, programming languages, and software development principles. Excellent academic achievement with strong technical skills.
