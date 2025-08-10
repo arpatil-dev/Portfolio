@@ -15,7 +15,7 @@
 }
 
 .contact-card {
-  background: linear-gradient(135deg, rgba(24,28,36,0.95) 0%, rgba(35,42,54,0.85) 100%);
+  background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, rgba(35,42,54,0.85) 100%);
   border-radius: 24px;
   padding: 48px 40px;
   box-shadow: 
@@ -36,7 +36,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #61dafb 0%, #232a36 50%, #61dafb 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--dark-bg-secondary) 50%, var(--primary-color) 100%);
   opacity: 0.8;
 }
 

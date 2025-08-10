@@ -14,7 +14,7 @@
     h1 {
         font-size: 2.5rem;
         margin-bottom: 40px;
-        color: white;
+        color: var(--dark-text-primary);
         font-weight: 600;
     }
     
@@ -25,10 +25,10 @@
         p {
             font-size: 1.1rem;
             margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--dark-text-secondary);
             
             strong {
-                color: #61dafb;
+                color: var(--primary-color);
                 font-weight: 600;
             }
         }
@@ -40,10 +40,10 @@
             margin: 40px 0;
             
             .highlight-item {
-                background: rgba(255, 255, 255, 0.05);
+                background: var(--dark-bg-card);
                 padding: 25px;
                 border-radius: 12px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                border: 1px solid var(--dark-border);
                 text-align: center;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 
@@ -55,10 +55,10 @@
                 h3 {
                     font-size: 1.2rem;
                     margin-bottom: 10px;
-                    color: #61dafb;
+                    color: var(--primary-color);
                     
                     .highlight-icon {
-                        color: #61dafb;
+                        color: var(--primary-color);
                         margin-right: 8px;
                     }
                 }
@@ -66,7 +66,7 @@
                 p {
                     font-size: 1rem;
                     margin: 0;
-                    color: rgba(255, 255, 255, 0.8);
+                    color: var(--dark-text-muted);
                 }
             }
         }
@@ -81,39 +81,39 @@
     
     .about-content {
         h1 {
-            color: #333;
+            color: var(--light-text-primary);
         }
         
         .about-text {
             p {
-                color: rgba(0, 0, 0, 0.8);
+                color: var(--light-text-secondary);
                 
                 strong {
-                    color: #0066cc;
+                    color: var(--success-color);
                 }
             }
             
             .about-highlights {
                 .highlight-item {
-                    background: white;
-                    border: 1px solid rgba(0, 0, 0, 0.1);
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+                    background: var(--light-bg-card);
+                    border: 1px solid var(--light-border);
+                    box-shadow: var(--light-shadow);
                     
                     &:hover {
                         box-shadow: 0 8px 25px rgba(0, 102, 204, 0.1);
                     }
                     
                     h3 {
-                        color: #0066cc;
+                        color: var(--success-color);
                         
                         .highlight-icon {
-                            color: #0066cc;
+                            color: var(--success-color);
                             margin-right: 8px;
                         }
                     }
                     
                     p {
-                        color: rgba(0, 0, 0, 0.7);
+                        color: var(--light-text-muted);
                     }
                 }
             }

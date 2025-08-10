@@ -1,3 +1,6 @@
+// Import centralized theme variables
+@import './assets/styles/overallTheme.scss';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -16,7 +19,7 @@ code {
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
+  background-color: var(--dark-bg-primary);
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
@@ -32,7 +35,7 @@ a:hover {
 }
 
 p, a, h1, h2, h3, h4, h5, label, button {
-  color: white;
+  color: var(--dark-text-primary);
   font-family: "Lato", sans-serif;
 }
 
@@ -73,14 +76,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .light-mode {
-  background-color: #f8f9fa;
+  background-color: var(--light-bg-primary);
 
   p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
+    color: var(--light-text-primary);
   }
 
   a:hover {
-    color: #5000ca;
+    color: var(--primary-color);
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   }
 

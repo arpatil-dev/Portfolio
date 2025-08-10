@@ -3,7 +3,8 @@
     
     // Timeline icon theme-aware styles
     .vertical-timeline-element-icon {
-        background: #ff6b6b !important; // Dark mode default (red/pink)
+        background: var(--primary-color) !important; // Dark mode default
+        box-shadow: 0 0 20px rgba(97, 218, 251, 0.3) !important;
     }
     
     .items-container {
@@ -13,49 +14,132 @@
             text-align: center;
             margin-bottom: 40px;
             font-size: 2.5rem;
-            color: white;
+            color: var(--dark-text-primary);
         }
     }
 }
 
-// Light mode separator and text
+// Glassmorphism effect for timeline cards
+.vertical-timeline-element--education .vertical-timeline-element-content {
+    background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, rgba(35,42,54,0.85) 100%) !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    box-shadow: 
+        0 8px 32px rgba(97,218,251,0.15),
+        0 4px 16px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(97,218,251,0.1) !important;
+    border: 1px solid rgba(97,218,251,0.2) !important;
+    backdrop-filter: blur(20px) !important;
+    transition: all 0.3s ease !important;
+    color: var(--dark-text-primary) !important;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 
+            0 12px 48px rgba(97,218,251,0.2),
+            0 6px 24px rgba(0,0,0,0.15),
+            inset 0 1px 0 rgba(97,218,251,0.15) !important;
+    }
+    
+    // Top glow line
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3%;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--dark-bg-secondary) 50%, var(--primary-color) 100%);
+        border-radius: 20px 20px 0 0;
+        opacity: 0.8;
+        width: 94%;
+    }
+    
+    h3, h4 {
+        color: var(--dark-text-primary) !important;
+    }
+    
+    p {
+        color: var(--dark-text-secondary) !important;
+    }
+}
+
+// Light mode styles
 .light-mode #education {
     &::after {
-        background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+        background: linear-gradient(90deg, transparent, var(--success-color), transparent);
     }
     
     .items-container h1 {
-        color: #333;
+        color: var(--light-text-primary);
     }
     
     // Light mode timeline icon
     .vertical-timeline-element-icon {
-        background: #00695c !important; // Teal theme for light mode education
+        background: var(--success-color) !important;
+        box-shadow: 0 0 20px rgba(25, 118, 210, 0.3) !important;
     }
-}
-
-.vertical-timeline-element--education .vertical-timeline-element-content {
-    box-shadow: 0 3px 0 #ff6b6b;
+    
+    // Light mode glassmorphism for timeline cards
+    .vertical-timeline-element--education .vertical-timeline-element-content {
+        background: linear-gradient(135deg, var(--light-bg-card) 0%, rgba(255,255,255,0.95) 100%) !important;
+        box-shadow: 
+            0 8px 32px rgba(25, 118, 210, 0.1),
+            0 4px 16px rgba(0,0,0,0.05),
+            inset 0 1px 0 rgba(25, 118, 210, 0.1) !important;
+        border: 1px solid rgba(25, 118, 210, 0.2) !important;
+        color: var(--light-text-primary) !important;
+        
+        &:hover {
+            box-shadow: 
+                0 12px 48px rgba(25, 118, 210, 0.15),
+                0 6px 24px rgba(0,0,0,0.08),
+                inset 0 1px 0 rgba(25, 118, 210, 0.15) !important;
+        }
+        
+        &::before {
+            background: linear-gradient(90deg, var(--success-color) 0%, var(--light-bg-card) 50%, var(--success-color) 100%);
+        }
+        
+        h3, h4 {
+            color: var(--light-text-primary) !important;
+        }
+        
+        p {
+            color: var(--light-text-secondary) !important;
+        }
+    }
 }
 
 .location {
     font-style: italic !important;
-    color: #666 !important;
+    color: var(--dark-text-muted) !important;
     margin-bottom: 5px !important;
     font-size: 0.9rem !important;
 }
 
 .grade {
     font-weight: bold !important;
-    color: #ff6b6b !important;
+    color: var(--primary-color) !important;
     margin-bottom: 10px !important;
     font-size: 1rem !important;
 }
 
-// Custom styles for education
-.vertical-timeline-element--education .vertical-timeline-element-icon {
-    background: #ff6b6b !important;
+// Light mode text colors
+.light-mode #education {
+    .location {
+        color: var(--light-text-muted) !important;
+    }
+    
+    .grade {
+        color: var(--success-color) !important;
+    }
 }
+
+// Remove default timeline icon styling since we're using custom styling above
+// .vertical-timeline-element--education .vertical-timeline-element-icon {
+//     background: #ff6b6b !important;
+// }
 
 @media screen and (max-width: 1170px) {
     #education .items-container {

@@ -1,0 +1,116 @@
+// overallTheme.scss - Centralized Color Management
+// Change these colors to rebrand your entire portfolio!
+
+:root {
+  // === PRIMARY BRAND COLORS ===
+  --primary-color: #61dafb;           // Main brand color (cyan blue)
+  --primary-hover: #4fa8c5;          // Primary hover state
+  --primary-dark: #3d8ba8;           // Darker primary for gradients
+  --primary-light: #87e4ff;          // Lighter primary for highlights
+  
+  // === SECONDARY COLORS ===
+  --secondary-color: #ff6b6b;        // Secondary brand color (coral/red)
+  --secondary-hover: #ee5a52;        // Secondary hover state
+  --secondary-dark: #dc4c3e;         // Darker secondary for gradients
+  
+  // === ACCENT COLORS ===
+//   --accent-color: #03dac6;           // Accent color (teal)
+//   --accent-hover: #00a693;          // Accent hover state
+  --accent-color: var(--primary-color);           // Accent color (teal)
+  --accent-hover: #00a693;          // Accent hover state
+  
+  // === SUCCESS/ACTION COLORS ===
+  --success-color: #1976d2;         // Success actions (blue)
+  --success-hover: #1565c0;         // Success hover
+  --success-dark: #0d47a1;          // Dark success
+  
+  // === WARNING/DOWNLOAD COLORS ===
+  --warning-color: var(--success-color);         // Warning/download actions (teal)
+  --warning-color: var(--success-color);         // Warning/download actions (teal)
+  --warning-hover: #23daff;         // Warning hover
+  --warning-dark: #2280ce;          // Dark warning
+  
+  // === DARK MODE COLORS ===
+  --dark-bg-primary: #0d1116;       // Main dark background
+  --dark-bg-secondary: #181c24;     // Secondary dark background
+  --dark-bg-card: rgba(255, 255, 255, 0.05); // Card backgrounds
+  --dark-text-primary: #ffffff;     // Primary text
+  --dark-text-secondary: rgba(255, 255, 255, 0.9); // Secondary text
+  --dark-text-muted: rgba(255, 255, 255, 0.8); // Muted text
+  --dark-border: rgba(255, 255, 255, 0.1); // Borders
+  --dark-shadow: rgba(0, 0, 0, 0.3); // Shadows
+  
+  // === LIGHT MODE COLORS ===
+  --light-bg-primary: #f8f9fa;      // Main light background
+  --light-bg-secondary: #ffffff;    // Secondary light background
+  --light-bg-card: #ffffff;         // Card backgrounds
+  --light-text-primary: #333333;    // Primary text
+  --light-text-secondary: rgba(0, 0, 0, 0.8); // Secondary text
+  --light-text-muted: rgba(0, 0, 0, 0.7); // Muted text
+  --light-border: rgba(0, 0, 0, 0.1); // Borders
+  --light-shadow: rgba(0, 0, 0, 0.1); // Shadows
+  
+  // === NAVIGATION COLORS ===
+  --nav-background: rgba(255, 255, 255, 0.15);
+  --nav-hover: rgba(255, 255, 255, 0.25);
+  --nav-border: rgba(255, 255, 255, 0.6);
+  
+  // === GRADIENTS ===
+  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-color), var(--secondary-hover));
+  --gradient-success: linear-gradient(135deg, var(--success-color), var(--success-hover));
+  --gradient-warning: linear-gradient(135deg, var(--warning-color), var(--warning-hover));
+  
+  // === GLASSMORPHISM EFFECTS ===
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+// === LIGHT MODE OVERRIDES ===
+.light-mode {
+  --nav-background: rgba(0, 0, 0, 0.15);
+  --nav-hover: rgba(0, 0, 0, 0.25);
+  --nav-border: rgba(0, 0, 0, 0.6);
+  --glass-bg: rgba(0, 0, 0, 0.05);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+// === THEME MIXINS FOR EASY USAGE ===
+@mixin theme-transition {
+  transition: all 0.3s ease;
+}
+
+@mixin glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@mixin hover-lift {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 
+=== HOW TO CHANGE YOUR PORTFOLIO THEME ===
+
+1. CHANGE PRIMARY COLOR:
+   --primary-color: #your-new-color;
+   --primary-hover: #slightly-darker-version;
+
+2. CHANGE SECONDARY COLOR:
+   --secondary-color: #your-accent-color;
+   --secondary-hover: #slightly-darker-version;
+
+3. CHANGE ACCENT COLOR:
+   --accent-color: #your-highlight-color;
+
+Example Color Schemes:
+- Purple Theme: --primary-color: #667eea; --secondary-color: #f093fb;
+- Green Theme: --primary-color: #11998e; --secondary-color: #38ef7d;
+- Orange Theme: --primary-color: #ff6b6b; --secondary-color: #feca57;
+- Pink Theme: --primary-color: #ff9a9e; --secondary-color: #fecfef;
+*/

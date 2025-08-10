@@ -1,25 +1,20 @@
-// Navigation.scss - Modern Side Dot Navigation
+// Navigation.scss - Modern Side Dot Navigation (Using Theme Variables)
 
 // CSS Variables for theme colors (Dark Mode - Default)
 :root {
-  --nav-primary: #2196f3;
-  --nav-secondary: #1976d2;
-  --nav-accent: #03dac6;
-  --nav-background: rgba(255, 255, 255, 0.1);
-  --nav-hover: rgba(255, 255, 255, 0.2);
-  --nav-text: #ffffff;
-  --nav-border: rgba(255, 255, 255, 0.3);
+  --nav-primary: var(--primary-color);
+  --nav-secondary: var(--primary-hover);
+  --nav-accent: var(--accent-color);
+  --nav-text: var(--dark-text-primary);
 }
 
 // Light Mode Variables
 .light-mode {
-  --nav-primary: #1976d2;
-  --nav-secondary: #0d47a1;
-  --nav-accent: #00695c;
-  --nav-background: rgba(0, 0, 0, 0.15);
-  --nav-hover: rgba(0, 0, 0, 0.25);
-  --nav-text: #333333;
-  --nav-border: rgba(0, 0, 0, 0.4);
+  --nav-primary: var(--primary-color);
+  --nav-secondary: var(--success-hover);
+  --nav-accent: var(--warning-color);
+  // --nav-accent: var(--accent-color);
+  --nav-text: var(--light-text-primary);
 }
 
 // Main Navigation Container
@@ -57,7 +52,7 @@
     &:hover {
       background: var(--nav-hover);
       transform: scale(1.1);
-      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+      box-shadow: 0 8px 25px var(--primary-color);
     }
 
     .MuiSvgIcon-root {
@@ -89,6 +84,7 @@
     border: 2px solid var(--nav-border);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
   .nav-label {
@@ -119,7 +115,7 @@
       background: var(--nav-primary);
       border-color: var(--nav-primary);
       transform: scale(1.3);
-      box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
+      box-shadow: 0 0 15px var(--primary-color);
     }
 
     .nav-label {
@@ -134,13 +130,13 @@
       background: var(--nav-accent);
       border-color: var(--nav-accent);
       transform: scale(1.2);
-      box-shadow: 0 0 12px rgba(3, 218, 198, 0.6);
+      box-shadow: 0 0 12px var(--accent-color), 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     .nav-label {
       background: var(--nav-accent);
       border-color: var(--nav-accent);
-      color: #000;
+      color: var(--dark-text-primary);
       font-weight: 600;
     }
   }
@@ -237,13 +233,13 @@
 // Pulse animation for active dot
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(3, 218, 198, 0.7);
+    box-shadow: 0 0 0 0 var(--accent-color);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(3, 218, 198, 0);
+    box-shadow: 0 0 0 10px transparent;
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(3, 218, 198, 0);
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 
@@ -273,12 +269,34 @@
 @media (prefers-contrast: high) {
   .nav-dot .dot {
     border-width: 3px;
+    background: var(--nav-background);
+    border-color: var(--nav-border);
   }
   
   .nav-dot.active .dot {
-    background: #ffffff;
-    border-color: #ffffff;
+    background: var(--nav-accent);
+    border-color: var(--nav-accent);
   }
+}
+
+// Enhanced visibility for both modes
+.nav-dot .dot {
+  // Ensure minimum visibility in all themes
+  min-width: 12px;
+  min-height: 12px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+// Dark mode specific enhancements
+:root .nav-dot .dot {
+  // background: rgba(255, 255, 255, 0.2);
+  border-color: var(--dark-text-primary);
+}
+
+// Light mode specific enhancements
+.light-mode .nav-dot .dot {
+  border-color: var(--light-text-primary);
 }
 
 // Reduced motion support

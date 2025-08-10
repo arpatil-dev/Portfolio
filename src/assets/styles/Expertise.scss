@@ -25,20 +25,54 @@
     .expertise-card {
         max-width: 1000px;
         width: 100%;
-        padding: 40px 20px;
+        padding: 40px 30px;
         text-align: center;
+        position: relative;
+        overflow: hidden;
+        
+        // Glassmorphism effect matching Contact and Education cards
+        background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, rgba(35,42,54,0.85) 100%);
+        border-radius: 24px;
+        box-shadow: 
+            0 8px 32px rgba(97,218,251,0.15),
+            0 4px 16px rgba(0,0,0,0.1),
+            inset 0 1px 0 rgba(97,218,251,0.1);
+        border: 1px solid rgba(97,218,251,0.2);
+        backdrop-filter: blur(20px);
+        transition: all 0.3s ease;
+        
+        // Top glow line
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--dark-bg-secondary) 50%, var(--primary-color) 100%);
+            opacity: 0.8;
+        }
+        
+        // Hover effect
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 48px rgba(97,218,251,0.2),
+                0 6px 24px rgba(0,0,0,0.15),
+                inset 0 1px 0 rgba(97,218,251,0.15);
+        }
         
         h2 {
             margin: 20px 0;
             font-size: 2.2rem;
-            color: white;
+            color: var(--dark-text-primary);
             font-weight: 600;
         }
         
         p {
             font-size: 1.2rem;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--dark-text-secondary);
             margin-top: 20px;
             max-width: 900px;
             margin-left: auto;
@@ -47,6 +81,7 @@
         
         svg {
             margin-bottom: 20px;
+            color: var(--primary-color);
         }
     }
 }
@@ -54,28 +89,48 @@
 // Light mode styles
 .light-mode .skills-container {
     h1 {
-        color: #333;
+        color: var(--light-text-primary);
     }
     
     svg {
-        color: #61dafb;
+        color: var(--primary-color);
     }
     
     &::after {
-        background: linear-gradient(90deg, transparent, #333, transparent);
+        background: linear-gradient(90deg, transparent, var(--light-text-primary), transparent);
     }
     
     .expertise-card {
+        // Light mode glassmorphism matching Contact and Education cards
+        background: linear-gradient(135deg, var(--light-bg-secondary) 0%, rgba(255,255,255,0.85) 100%);
+        border: 1px solid rgba(25, 118, 210, 0.2);
+        box-shadow: 
+            0 8px 32px rgba(25,118,210,0.15),
+            0 4px 16px rgba(0,0,0,0.05),
+            inset 0 1px 0 rgba(25,118,210,0.1);
+        
+        // Light mode top glow line
+        &::before {
+            background: linear-gradient(90deg, var(--success-color) 0%, var(--light-bg-secondary) 50%, var(--success-color) 100%);
+        }
+        
+        &:hover {
+            box-shadow: 
+                0 12px 48px rgba(25,118,210,0.2),
+                0 6px 24px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(25,118,210,0.15);
+        }
+        
         h2 {
-            color: #333;
+            color: var(--light-text-primary);
         }
         
         p {
-            color: rgba(0, 0, 0, 0.8);
+            color: var(--light-text-secondary);
         }
         
         svg {
-            color: #61dafb;
+            color: var(--primary-color);
         }
     }
 }
@@ -90,7 +145,12 @@
         }
         
         .expertise-grid .expertise-card {
-            padding: 30px 15px;
+            padding: 30px 20px;
+            border-radius: 16px;
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
             
             h2 {
                 font-size: 1.8rem;
@@ -107,7 +167,8 @@
 @media (max-width: 480px) {
     .skills-container {
         .expertise-grid .expertise-card {
-            padding: 20px 10px;
+            padding: 20px 15px;
+            border-radius: 12px;
             
             h2 {
                 font-size: 1.5rem;

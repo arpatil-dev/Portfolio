@@ -2,24 +2,169 @@
 .github-label-mobile {
     display: none;
 }
+
+/* Project header with title and toggle button */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 15px;
+    margin-top: 20px;
+    h2 {
+        flex: 1;
+        margin: 0;
+        
+    }
+}
+
+/* Hide toggle button on desktop by default */
+.description-toggle {
+    display: none;
+    margin-right:5px;
+}
+
+/* Desktop description - always visible, styled like original */
+.project-description-desktop {
+    display: block;
+    margin-bottom: 15px;
+    
+    p {
+        margin: 0;
+        color: var(--dark-text-secondary);
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile description - hidden by default on desktop */
+.project-description-mobile {
+    display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Hide desktop description on mobile */
+    .project-description-desktop {
+        display: none;
+    }
+    
+    /* Show mobile description container on mobile */
+    .project-description-mobile {
+        display: block;
+    }
+    
+    /* Show toggle button on mobile */
+    .description-toggle {
+        display: flex;
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        color: var(--dark-text-primary);
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        margin-top: 5px;
+        
+        &:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(97, 218, 251, 0.3);
+            color: #000;
+        }
+        
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    
+    /* Light mode toggle button on mobile */
+    .light-mode .description-toggle {
+        color: var(--light-text-primary);
+        background: var(--light-bg-card);
+        border-color: var(--light-border);
+        
+        &:hover {
+            background: var(--success-color);
+            border-color: var(--success-color);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+        }
+    }
+    
+    /* Mobile project description with smooth expand/collapse animation */
+    .project-description {
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        
+        &.collapsed {
+            max-height: 0;
+            margin-bottom: 0;
+            opacity: 0;
+        }
+        
+        &.expanded {
+            max-height: 200px;
+            margin-bottom: 15px;
+            opacity: 1;
+        }
+        
+        p {
+            margin: 0;
+            padding: 12px 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            color: var(--dark-text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    /* Light mode description styling on mobile */
+    .light-mode .project-description {
+        p {
+            background: var(--light-bg-card);
+            border-color: var(--light-border);
+            color: var(--light-text-secondary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .github-label-mobile {
         display: inline-block;
-        background: #fff;
-        color: #181c24;
-        font-size: 0.85rem;
+        background: var(--light-bg-card);
+        color: var(--light-text-primary);
+        font-size: 0.75rem;
         font-weight: 600;
+        text-align: center;
         border-radius: 16px;
-        padding: 2.5px 14px;
-        margin-top: -5px;
-        margin-bottom: 10px;
+        margin-top: 2px;
+        padding: 2.5px 12px;
+        position: relative;
         letter-spacing: 0.5px;
+        left: -5px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.10);
         vertical-align: middle;
     }
     .light-mode .github-label-mobile {
-        background: #222;
-        color: #fff;
+        background: var(--dark-bg-secondary);
+        color: var(--dark-text-primary);
+    }
+    .project-header h2{
+        margin-left:5px;
     }
 }
 .projects-container {
@@ -50,7 +195,31 @@
 }
   
 .project h2:hover {
-    text-decoration: underline;
+    // when hover on the title should appear a small go to website tooltip
+    position: relative;
+
+    &::after {
+        content: "Open";
+        position: absolute;
+        left: 10px;
+        top: -66px;  /* Fixed positioning instead of percentage */
+        
+        margin-top: 6px;
+        background: #222;
+        color: #fff;
+        font-size: 0.8rem;
+        padding: 6px 14px;
+        border-radius: 6px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s;
+        z-index: 10;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
   
@@ -69,8 +238,8 @@
         top: 18px;
         right: 18px;
         opacity: 1;
-        transition: transform 0.2s;
-        z-index: 2;
+        
+
 
         /* Mobile: move icon inline with project name */
         @media (max-width: 700px) {
@@ -160,4 +329,11 @@
             padding-bottom: 5%;
         }
     }
+}
+
+.light-mode .project p {
+    color: rgba(0, 0, 0, 0.8);
+}
+.project p {
+    color: rgba(227, 227, 227, 0.8);
 }

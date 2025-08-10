@@ -14,10 +14,7 @@ function Education() {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
             date="Jun 2023 - Sep 2026"
-            iconStyle={{ background: '#ff6b6b', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">B.Tech in Computer Science & Engineering</h3>
@@ -31,7 +28,6 @@ function Education() {
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="Sep 2020 - May 2023"
-            iconStyle={{ background: '#ff6b6b', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">Diploma in Computer Engineering</h3>

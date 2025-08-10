@@ -47,11 +47,8 @@ function Main() {
           <p>Full Stack Developer</p>
 
           <div className="resume-buttons">
-            <button className="resume-btn view-btn" onClick={handleResumeView}>
+            <button className="resume-btn download-btn" onClick={handleResumeView}>
               <VisibilityIcon /> View Resume
-            </button>
-            <button className="resume-btn download-btn" onClick={handleResumeDownload}>
-              <DownloadIcon /> Download Resume
             </button>
           </div>
 
