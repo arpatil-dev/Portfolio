@@ -53,7 +53,7 @@ function Project() {
         {
             id: 3,
             image: mock04,
-            title: "Technotsav Website",
+            title: "Technotsav 2k25 - Event Website",
             description: "Developed a dynamic website for the Technotsav event, featuring event schedules, speaker profiles, and registration forms. Built with React.js and Node.js, ensuring a seamless user experience.",
             demoLink: "https://technotsav-dypcet.vercel.app/",
             githubLink: "https://github.com/PrarambhDevelopers/technotsav"
@@ -69,7 +69,7 @@ function Project() {
         {
             id: 5,
             image: mock06,
-            title: "Bank Management System using Java",
+            title: "Bank Management System using Java Swing",
             description: "Developed a comprehensive bank management system using Java Swing, JDBC, and MySQL, featuring user authentication, account management, and transaction processing. Implemented with a focus on security and performance.",
             demoLink: "https://github.com/arpatil-dev/Bank-Management-System",
             githubLink: "https://github.com/arpatil-dev/Bank-Management-System"

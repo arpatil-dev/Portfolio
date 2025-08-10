@@ -38,7 +38,7 @@ function Education() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="2010 - 2020"
+            date="June 2010 - March 2020"
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">Secondary School Certificate (SSC)</h3>
