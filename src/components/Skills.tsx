@@ -45,7 +45,7 @@ const skillsCategories = {
         },
         { 
             name: "C", 
-            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", 
+            iconUrl: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg", 
             color: "#A8B9CC" 
         },
     ],
@@ -62,7 +62,7 @@ const skillsCategories = {
         },
         { 
             name: "Express.js", 
-            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", 
+            iconUrl: "https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png", 
             color: "#000000" 
         },
         { 
@@ -84,7 +84,7 @@ const skillsCategories = {
         },
         { 
             name: "GitHub", 
-            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", 
+            iconUrl: "https://icons.veryicon.com/png/o/internet--web/color-social-media-icon/github-36.png", 
             color: "#181717" 
         },
         { 
