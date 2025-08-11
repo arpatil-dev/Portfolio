@@ -226,9 +226,10 @@
   }
 }
 
-.side-nav-container {
-  animation: slideInRight 0.6s ease-out;
-}
+// Animation disabled to prevent scroll issues on page load
+// .side-nav-container {
+//   animation: slideInRight 0.6s ease-out;
+// }
 
 // Pulse animation for active dot
 @keyframes pulse {
