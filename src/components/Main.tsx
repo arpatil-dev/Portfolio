@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DownloadIcon from '@mui/icons-material/Download';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import '../assets/styles/Main.scss';
 import PP from '../assets/images/Aryan-close-cropped.avif';
 import PP_SPECS from '../assets/images/Aryan-Patil.avif';
 
 function Main() {
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide scroll indicator when user scrolls down from top
+      if (window.scrollY > 100) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleResumeView = () => {
     // Replace with your actual resume URL or path
@@ -26,6 +42,13 @@ function Main() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleScrollDown = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -59,6 +82,16 @@ function Main() {
           </div>
         </div>
       </div>
+      
+      {/* Scroll Indicator */}
+      {showScrollIndicator && (
+        <div className="scroll-indicator" onClick={handleScrollDown}>
+          <div className="scroll-arrow">
+            <KeyboardArrowDownIcon />
+          </div>
+          <span className="scroll-text">Scroll Down</span>
+        </div>
+      )}
     </div>
   );
 }

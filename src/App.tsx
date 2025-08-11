@@ -28,7 +28,7 @@ function App() {
     }
 
     useEffect(() => {
-        // Aggressive scroll reset - immediate positioning
+        // Simple scroll reset only on initial load
         const resetScroll = () => {
             document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
@@ -38,25 +38,11 @@ function App() {
         // Reset immediately
         resetScroll();
         
-        // Reset after DOM load
-        setTimeout(resetScroll, 50);
+        // One final reset after brief delay for any loading content
+        const timeoutId = setTimeout(resetScroll, 100);
         
-        // Reset after images/fonts might load
-        setTimeout(resetScroll, 200);
-        
-        // Reset after animations complete
-        setTimeout(resetScroll, 800);
-        
-        // Listen for any layout changes and reset
-        const observer = new MutationObserver(resetScroll);
-        observer.observe(document.body, { 
-            childList: true, 
-            subtree: true, 
-            attributes: false 
-        });
-        
-        // Cleanup observer
-        return () => observer.disconnect();
+        // Cleanup timeout
+        return () => clearTimeout(timeoutId);
       }, []);
 
     return (
