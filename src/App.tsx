@@ -63,6 +63,7 @@ function App() {
             <Project/>
             <SectionSeparator/>
             <Contact/>
+            <SectionSeparator/>
         </FadeIn>
         <Footer />
         <Analytics />
