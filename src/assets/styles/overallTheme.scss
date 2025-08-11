@@ -278,3 +278,33 @@ html {
 .light-mode html {
   scrollbar-color: var(--success-color) var(--light-bg-secondary);
 }
+
+// === CUSTOM PNG CURSOR ===
+// Custom cursor using your PNG image
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: url('../images/cursor.png') 16 16, auto !important;
+  }
+
+  // Specific cursor states for different elements
+  a, button, [role="button"], .cursor-pointer {
+    cursor: url('../images/cursor.png') 16 16, pointer !important;
+  }
+
+  input, textarea, select {
+    cursor: url('../images/cursor.png') 16 16, text !important;
+  }
+
+  // Hover effects - add glow to cursor area
+  a:hover, button:hover, [role="button"]:hover, .cursor-pointer:hover {
+    filter: drop-shadow(0 0 10px var(--primary-color));
+    transition: filter 0.3s ease;
+  }
+}
+
+// Mobile devices - restore default cursor
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
