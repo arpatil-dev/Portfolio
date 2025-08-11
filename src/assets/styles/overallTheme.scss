@@ -283,16 +283,16 @@ html {
 // Custom cursor using your PNG image
 @media (hover: hover) and (pointer: fine) {
   * {
-    cursor: url('../images/cursor.png') 16 16, auto !important;
+    cursor: url('../images/cursor.png') 0 0, auto !important;
   }
 
   // Specific cursor states for different elements
   a, button, [role="button"], .cursor-pointer {
-    cursor: url('../images/cursor.png') 16 16, pointer !important;
+    cursor: url('../images/cursor.png') 0 0, pointer !important;
   }
 
   input, textarea, select {
-    cursor: url('../images/cursor.png') 16 16, text !important;
+    cursor: url('../images/cursor.png') 0 0, text !important;
   }
 
   // Hover effects - add glow to cursor area
