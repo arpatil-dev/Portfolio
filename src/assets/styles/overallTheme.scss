@@ -207,3 +207,74 @@ Example Color Schemes:
 - Orange Theme: --primary-color: #ff6b6b; --secondary-color: #feca57;
 - Pink Theme: --primary-color: #ff9a9e; --secondary-color: #fecfef;
 */
+
+// === CUSTOM MODERN SCROLLBAR ===
+
+// Dark Mode Scrollbar (Default)
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg-secondary);
+  border-radius: 10px;
+  border: 1px solid rgba(97, 218, 251, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 10px;
+  border: 2px solid var(--dark-bg-secondary);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--dark-bg-secondary);
+}
+
+// Light Mode Scrollbar
+.light-mode {
+  ::-webkit-scrollbar-track {
+    background: var(--light-bg-secondary);
+    border: 1px solid rgba(25, 118, 210, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--success-color) 0%, var(--success-dark) 100%);
+    border: 2px solid var(--light-bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--success-hover) 0%, var(--success-color) 100%);
+    box-shadow: 0 0 10px rgba(25, 118, 210, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--success-dark);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--light-bg-secondary);
+  }
+}
+
+// Firefox Scrollbar Support
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--dark-bg-secondary);
+}
+
+.light-mode html {
+  scrollbar-color: var(--success-color) var(--light-bg-secondary);
+}
