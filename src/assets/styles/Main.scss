@@ -140,7 +140,11 @@
     z-index: 2;
     img {
         width: 150px;
+        height: 150px; /* Fixed height to prevent layout shift */
         border-radius: 50%;
+        object-fit: cover; /* Ensure proper image scaling */
+        /* Prevent image loading from causing layout shifts */
+        aspect-ratio: 1/1;
     }
 }
 
