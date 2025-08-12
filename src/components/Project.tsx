@@ -68,20 +68,21 @@ function Project() {
         },
         {
             id: 5,
-            image: mock06,
-            title: "Bank Management System using Java Swing",
-            description: "Developed a comprehensive bank management system using Java Swing, JDBC, and MySQL, featuring user authentication, account management, and transaction processing. Implemented with a focus on security and performance.",
-            demoLink: "https://github.com/arpatil-dev/Bank-Management-System",
-            githubLink: "https://github.com/arpatil-dev/Bank-Management-System"
-        },
-        {
-            id: 6,
             image: mock07,
             title: "Grampanchyat Valivade Website",
             description: "Developed a dynamic website for the Grampanchyat Valivade, showcasing local news, events, and resources. Built with HTML and Node.js, featuring a user-friendly interface and responsive design.",
             demoLink: "https://github.com/Yash-Ainapure/EGramProject",
             githubLink: "https://github.com/Yash-Ainapure/EGramProject"
         },
+        {
+            id: 6,
+            image: mock06,
+            title: "Bank Management System using Java Swing",
+            description: "Developed a comprehensive bank management system using Java Swing, JDBC, and MySQL, featuring user authentication, account management, and transaction processing. Implemented with a focus on security and performance.",
+            demoLink: "https://github.com/arpatil-dev/Bank-Management-System",
+            githubLink: "https://github.com/arpatil-dev/Bank-Management-System"
+        },
+        
         {
             id: 7,
             image: mock08,
