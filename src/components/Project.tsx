@@ -39,7 +39,7 @@ function Project() {
             image: mock02,
             title: "NinjaNest – Student Accommodation Platform",
             description: "Created a platform for students to rent, book, and list rooms with AI-based price prediction and intelligent roommate matching system. Built using MERN stack with Google OAuth integration for secure authentication.",
-            demoLink: "https://github.com/Undefined-Hub/NinjaNest",
+            demoLink: "https://ninja-nest-alpha.vercel.app/",
             githubLink: "https://github.com/Undefined-Hub/NinjaNest"
         },
         {
