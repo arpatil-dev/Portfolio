@@ -47,7 +47,7 @@ function Project() {
             image: mock03,
             title: "Toggl – Drag-and-Drop Website Builder",
             description: "Developed a no-code website builder with intuitive drag-and-drop interface, domain linking capabilities, and hosting features. Implemented using MERN stack with JWT authentication and GrapeJS for the visual editor.",
-            demoLink: "https://www.toggl.app/",
+            demoLink: "https://www.toggl.site/",
             githubLink: "https://github.com/TogglHQ/toggl-v2"
         },
         {
