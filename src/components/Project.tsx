@@ -7,9 +7,11 @@ import mock05 from '../assets/images/Dattamsh.png';
 import mock06 from '../assets/images/BNK.png';
 import mock07 from '../assets/images/Gram.png';
 import mock08 from '../assets/images/Add.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
+// import mock09 from '../assets/images/mock09.png';
+import mock10 from '../assets/images/TrackORoute.png';
 import github from '../assets/images/github.svg';
+import mock09 from '../assets/images/R8IFY.png';
+
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 // import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -26,6 +28,23 @@ function Project() {
     };
 
     const projects = [
+             
+        {
+            id: 8,
+            image: mock09,
+            title: "R8IFY - A role-based store rating and management platform.",
+            description: "A full-stack web app with role-based access for Admins, Store Owners, and Users. Users can browse and rate stores, owners manage dashboards, and admins monitor stats. Features secure authentication, validations, and a responsive UI for a seamless experience.",
+            demoLink: "https://r8ify.vercel.app/",
+            githubLink: "https://github.com/arpatil-dev/R8IFY"
+        }  ,
+        {
+            id: 9,
+            image: mock10,
+            title: "Track O Route - A Trip and Route Tracking App",
+            description: "TrackORoute is a real-time location tracking app that records routes with high accuracy in both foreground and background. It optimizes tracking to balance precision and battery life, highlights start/end points, and captures detailed journeys for navigation, fitness, and trip logging.",
+            demoLink: "https://track-o-route.vercel.app/",
+            githubLink: "https://github.com/arpatil-dev/TrackORoute"
+        },
         {
             id: 0,
             image: mock01,
@@ -33,7 +52,7 @@ function Project() {
             description: "Built a comprehensive platform enabling real-time collaboration with Kanban boards, chat functionality, and team management features using MERN stack, JWT authentication, StreamChat, and Agora.io for video communication.",
             demoLink: "https://colab-1tfx.vercel.app/",
             githubLink: "https://github.com/Yash-Ainapure/Hackathon"
-        },
+        },  
         {
             id: 1,
             image: mock02,
@@ -90,7 +109,8 @@ function Project() {
             description: "Developed a comprehensive student admission management system using VB.Net, featuring student registration, receipt generation using Crystal Reports (SAP), and data storing functionalities.",
             demoLink: "https://github.com/arpatil-dev/StudentAdmissionManagementSystem",
             githubLink: "https://github.com/arpatil-dev/StudentAdmissionManagementSystem"
-        }
+        } 
+        
     ];
 
     return (
