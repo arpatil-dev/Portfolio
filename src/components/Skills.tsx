@@ -55,6 +55,11 @@ const skillsCategories = {
             iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
             color: "#61DAFB" 
         },
+        {
+            name: "React Native",
+            iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            color: "#61DAFB"
+        },
         { 
             name: "Node.js", 
             iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", 
