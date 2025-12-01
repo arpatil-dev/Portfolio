@@ -7,10 +7,11 @@ import mock05 from "../assets/images/Dattamsh.png";
 import mock06 from "../assets/images/BNK.png";
 import mock07 from "../assets/images/Gram.png";
 import mock08 from "../assets/images/Add.png";
-import mock69 from '../assets/images/Classtro.png';
+import mock69 from "../assets/images/Classtro.png";
 import mock10 from "../assets/images/TrackORoute.png";
 import github from "../assets/images/github.svg";
 import mock09 from "../assets/images/R8IFY.png";
+import mocktor from "../assets/images/tor.png";
 
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 // import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
@@ -49,9 +50,18 @@ function Project() {
       githubLink: "https://github.com/arpatil-dev/R8IFY",
     },
     {
+      id: 11,
+      image: mocktor,
+      title: "TrackORoute - React Native App",
+      description:
+        "TrackORoute is a real-time location tracking application that captures and manages user routes with high accuracy in both foreground and background. It intelligently optimizes tracking for precision and battery efficiency, logs complete journeys with start and end points, and provides smooth trip visualization. Designed for navigation, fitness, logistics, and travel logging, TrackORoute delivers a reliable and seamless tracking experience.",
+      demoLink: "https://track-o-route.vercel.app/",
+      githubLink: "https://github.com/arpatil-dev/TrackORoute",
+    },
+    {
       id: 9,
       image: mock10,
-      title: "Track O Route - A Trip and Route Tracking App",
+      title: "(Admin) Track O Route - A Trip and Route Tracking App",
       description:
         "TrackORoute is a real-time location tracking app that records routes with high accuracy in both foreground and background. It optimizes tracking to balance precision and battery life, highlights start/end points, and captures detailed journeys for navigation, fitness, and trip logging.",
       demoLink: "https://track-o-route.vercel.app/",
@@ -141,7 +151,8 @@ function Project() {
       </h1>
       <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.id} className="project">
+          <div key={project.id} className="project" >
+            
             <a href={project.demoLink} target="_blank" rel="noreferrer">
               <img
                 src={project.image}
@@ -150,6 +161,7 @@ function Project() {
                 width="100%"
               />
             </a>
+            
 
             <div className="project-header">
               <a href={project.demoLink} target="_blank" rel="noreferrer">
